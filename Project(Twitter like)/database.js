@@ -8,7 +8,7 @@ const pool = mysql.createPool({
   password: process.env.MYSQL_PASSWORD,
   database: process.env.MYSQL_DATABASE
 });
-//yooo
+//yoooooo
 // Function to get all users
 function getDatas(callback) {
   pool.query("SELECT * FROM users", (err, data) => {
