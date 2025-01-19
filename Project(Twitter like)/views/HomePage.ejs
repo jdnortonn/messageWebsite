@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>HomePage </title>
+</head>
+
+<body>
+
+    <p class="welcome-message">
+        <% if(username){ %>
+          <%= username %> is logged in
+        <% } else {%>
+          You are not logged in
+        <%  } %>
+      </p>
+    
+<%- include('./partials/div.ejs') %>
+    
+    
+    
+</body>
+</html>

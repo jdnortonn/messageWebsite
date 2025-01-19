@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>FORM</title>
+</head>
+<body>
+    <p>sign up</p>
+    
+
+    <form action="/user/new" method="POST">
+        <input type="email" name="email" placeholder="Email" required>
+        
+        <input type="text" name="username" placeholder="Username" required>
+        
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Sign Up</button>
+      </form>
+      <div class="Home"><a href="/">Home</a></div>
+</body>
+</html>
+

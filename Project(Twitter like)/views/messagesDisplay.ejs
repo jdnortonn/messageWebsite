@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    
+</head>
+<body>
+    <p>messages tab</p>
+
+    <form action="/messages/display" method="POST">
+        <input type="text" name="sentTo" placeholder="Who to find" required> 
+        <button type="submit">Sign Up</button>
+    </form>
+
+    
+</body>
+</html>

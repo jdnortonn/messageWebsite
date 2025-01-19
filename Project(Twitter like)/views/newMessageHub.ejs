@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>HomePage </title>
+   
+</head>
+
+<body>
+    <!-- I want to click one of these links and then it starts the 
+    display process so my current idea is to have it call a function thats grabs
+    /messages/userView (userView would be a custom value that I snag to use for the db.createdisplay function) -->
+    <% if (stringSet) { %>
+        <div class="user-links-container">
+          <% stringSet.forEach(element => { %>
+            <div class="userHub">
+              <a href="/messages/test/<%= element %>"><%= element %></a>
+            </div>
+          <% }); %>
+        </div>
+      <% } %>
+<form action="/messages/send" method="POST">
+    <input type="text" name="sentTo" placeholder="Who to send to" required> 
+
+    <input type="text" name="sentMessage" placeholder="message" required>
+    <button type="submit">send</button>
+  </form>
+  <div class="Home"><a href="/">Home</a></div>
+
+
+  <% if(!found){ %>
+    <p>user does not exist</p>
+    <%  } %>
+    
+    
+    
+</body>
+</html>

@@ -1,0 +1,22 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>FORM</title>
+</head>
+<body>
+    <p>login form</p>
+    
+
+    <form action="/user/login" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="text" name="password" placeholder="Password" required>
+        <button type="submit">login</button>
+      </form>
+      <% if (!prevAttempt){ %>
+        <p>Incorrect password/username try again</p>
+     <% } %>
+      <div class="login"><a href="/user/new">Sign up?</a></div>
+</body>
+<div class="Home"><a href="/">Home</a></div>
+</html>
+

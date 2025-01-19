@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+</head>
+<body>
+    <p>messages tab</p>
+
+    <div class="messages-container">
+  <% array.forEach((message) => { %>
+    <%- message%>
+  <% }); %>
+</div>
+
+   <form action="/messages/send" method="POST">
+    
+
+    <input type="text" name="sentMessage" placeholder="message" required>
+
+    <input type="hidden" name="sentTo" value=<%=sentTo %>>
+    <button type="submit">Send Message</button>
+  </form>
+  <div class="Home"><a href="/">Home</a></div>
+</body>
+</html>

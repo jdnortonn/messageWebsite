@@ -1,0 +1,19 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>FORM</title>
+</head>
+<body>
+    <p>delete account form</p>
+    
+
+    <form action="/user/delete" method="POST">
+        <input type="text" name="password" placeholder="enter password" required> 
+        <button type="submit">Proceed</button>
+      </form>
+      <% if(!wrongPassword){ %>
+    <p>incorrect password</p>
+    <%  } %>
+     <div class="Home"><a href="/">Home</a></div>
+</body>
+</html>

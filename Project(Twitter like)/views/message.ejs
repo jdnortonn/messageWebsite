@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <%- include('./partials/header.ejs') %>
+    <title>Message </title>
+    <script src="/js.js"></script>
+</head>
+<body>
+    <div class = "user1"> Testing</div>
+    <p>message</p>
+    <div id ="Logged">Not Logged In</div>
+    <%- include('./partials/div.ejs') %>
+    <button type="button" onclick="promptUser()">Create User</button>
+    <button type="button" onclick="loginUser();displayUser()">Login User</button>
+    
+</body>
+</html>
